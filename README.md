@@ -26,6 +26,12 @@ Note: the paper reports only `Accuracy` and `F1` in Table 2.
 
 ## 3. Dataset and Split Policy
 
+We release a large-scale **Chinese Text Normalization (TN) Dataset** in corporatioin with Databaker (Beijing) Technology Co., Ltd.
+
+To download the dataset, please visit https://www.data-baker.com/en/#/data/index/TNtts.
+
+(For Chinese version of the download page, please visit https://www.data-baker.com/data/index/TNtts.)
+
 ### Paper-aligned split used by current best run
 
 - `dataset/processed/shuffled_BMESO/train.char.bmes` (`23957` sentences)
