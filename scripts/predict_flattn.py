@@ -23,9 +23,9 @@ from flattn.rules import Rule
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Predict tags/entities with a trained FlatTN checkpoint")
-    parser.add_argument("--checkpoint", default="models/FlatTN-20250209/best.pt")
-    parser.add_argument("--run_config", default="models/FlatTN-20250209/run_config.json")
-    parser.add_argument("--label_vocab", default="models/FlatTN-20250209/label_vocab.json")
+    parser.add_argument("--checkpoint", default="models/FlatTN-20260209/best.pt")
+    parser.add_argument("--run_config", default="models/FlatTN-20260209/run_config.json")
+    parser.add_argument("--label_vocab", default="models/FlatTN-20260209/label_vocab.json")
 
     parser.add_argument("--lexicon_path", default="lexicon.txt")
     parser.add_argument("--input_file", default="", help="Input text file, one sentence per line")

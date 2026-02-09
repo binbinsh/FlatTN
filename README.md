@@ -7,7 +7,7 @@ This repository contains the FlatTN training/evaluation/inference pipeline for t
 Best pretrained model files are distributed via Google Drive:
 
 - Public link: [https://drive.google.com/drive/folders/1I-fNYXBwmeyrTWxHJ0X5ySZ-4ugn2Nb2](https://drive.google.com/drive/folders/1I-fNYXBwmeyrTWxHJ0X5ySZ-4ugn2Nb2)
-- After download, place files under: `models/FlatTN-20250209/`
+- After download, place files under: `models/FlatTN-20260209/`
 
 Test metrics (paper + current checkpoint):
 
@@ -97,9 +97,9 @@ bash train.sh
 
 ```bash
 uv run python scripts/evaluate_flattn.py \
-  --checkpoint models/FlatTN-20250209/best.pt \
-  --run_config models/FlatTN-20250209/run_config.json \
-  --label_vocab models/FlatTN-20250209/label_vocab.json \
+  --checkpoint models/FlatTN-20260209/best.pt \
+  --run_config models/FlatTN-20260209/run_config.json \
+  --label_vocab models/FlatTN-20260209/label_vocab.json \
   --test_file dataset/processed/shuffled_BMESO/test.char.bmes \
   --device auto
 ```
@@ -109,7 +109,7 @@ uv run python scripts/evaluate_flattn.py \
 ### Model location
 
 - Download source: [https://drive.google.com/drive/folders/1I-fNYXBwmeyrTWxHJ0X5ySZ-4ugn2Nb2](https://drive.google.com/drive/folders/1I-fNYXBwmeyrTWxHJ0X5ySZ-4ugn2Nb2)
-- After download, place files under: `models/FlatTN-20250209/`
+- After download, place files under: `models/FlatTN-20260209/`
 
 Model selection:
 
@@ -119,7 +119,7 @@ Model selection:
 ### Integrity check
 
 ```bash
-MODEL_DIR=models/FlatTN-20250209
+MODEL_DIR=models/FlatTN-20260209
 cd "$MODEL_DIR"
 shasum -a 256 -c SHA256SUMS.txt
 ```
@@ -130,9 +130,9 @@ Use the new inference script:
 
 ```bash
 uv run python scripts/predict_flattn.py \
-  --checkpoint models/FlatTN-20250209/best.pt \
-  --run_config models/FlatTN-20250209/run_config.json \
-  --label_vocab models/FlatTN-20250209/label_vocab.json \
+  --checkpoint models/FlatTN-20260209/best.pt \
+  --run_config models/FlatTN-20260209/run_config.json \
+  --label_vocab models/FlatTN-20260209/label_vocab.json \
   --input_file demo_input.txt \
   --output_file demo_output.jsonl \
   --device auto
@@ -142,9 +142,9 @@ You can also pass one sentence directly:
 
 ```bash
 uv run python scripts/predict_flattn.py \
-  --checkpoint models/FlatTN-20250209/best.pt \
-  --run_config models/FlatTN-20250209/run_config.json \
-  --label_vocab models/FlatTN-20250209/label_vocab.json \
+  --checkpoint models/FlatTN-20260209/best.pt \
+  --run_config models/FlatTN-20260209/run_config.json \
+  --label_vocab models/FlatTN-20260209/label_vocab.json \
   --text "今天是2021/09/06。" \
   --device auto
 ```
